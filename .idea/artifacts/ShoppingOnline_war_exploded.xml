@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ShoppingOnline:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ShoppingOnline_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ShoppingOnline/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ShoppingOnline" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.16.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.16.RELEASE" />
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.11" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
+          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.15" />
+          <element id="library" level="project" name="c3p0-0.9.5.2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

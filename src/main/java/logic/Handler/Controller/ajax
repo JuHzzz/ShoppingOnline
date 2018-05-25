@@ -1,0 +1,70 @@
+<Ajax>
+    1.一种异步的交互方式，允许浏览器与服务器直接进行通信而无需刷新整个页面。
+    2.相比于同步的交互方式，我需要等待当前请求处理完成之后，返回整个页面，用户体验会很不好，
+    而Ajax异步请求，可以实现无需刷新整个页面就实现和服务器的通信；
+    3.XMLHttpRequest：一种处理传输的请求的对象，请求的格式可以是XML,TXT,JSON等
+    *.通过XMLHttpRequest对象实现Ajax
+    4.它是集中技术聚合在一起实现的：
+        ①.服务器端语言：服务器需要具备向浏览器发送特定信息的能力；Ajax与服务器端语言无关
+        ②.XML：是一种描述数据传输的格式，Ajax需要一种格式化的数据格式在服务器和客户端之间传递信息
+        ③.XHTML和CSS：标准化呈现；
+        ④.DOM：实现动态显示和交互；
+       *⑤.使用XMLHTTP组件的XMLHttpRequest对象进行异步数据读取
+        ⑥.使用JavaScript处理和绑定所有数据；
+    5.缺陷：浏览器的兼容、局部刷新导致后退功能失效、对流媒体的支持没有Flash、Java Applet好
+
+<XMLHttpRequest>
+    1.XMLHttpRequest在不同浏览器上的实现是一致的；
+    2.底层：创建XMLHttpRequest对象,通过对weindow.XMLHttpRequest的调用会返回一个对象或null，if语句会
+    把返回的结果当做true/false，如果是null就是false，否则就是true;
+    如果XMLHttpRequest对象存在，则会生成一个XMLHttpRequest对象的实例，如果不存在就去检测ActiveObject的
+    实例是否存在，如果存在，那么久吧Microsoft.XMLHTTP的新实例赋给这个实例对象;
+
+<Ajax数据传输格式>
+
+    1.HTML：通过对应dom对象的innerHtml属性,可以将相应中的数据直接放入指定HTML文件对象中
+    *.优点：因为返回的本身就是HTML，所以浏览器端不需要解析，可读性好，效率高，
+    *.缺点：但是如果更新多个部分，就不合适，涉及到对响应信息进行拆分；另外innerHTML并非DOM标准
+
+    2.XML：需要使用requestXML对象来获取XML数据，并且结果不能直接使用，需要先创建对应节点，再放入节点中
+    *.优点：是一种通用的数据格式，不用把数据强加到定义好的格式中，而是要为数据自定义合适的标记，更好地利用DOM
+    *.缺点：如果收到的XML文件非常的长，那么解析起来就会很麻烦
+
+    3.JSON：是一种简单的数据格式，比XML更加的轻巧，它是JavaScript的原生格式，意味着在JavaScript中
+    处理JSON不需要任何特殊的API或工具包,他就像是JavaScript创建的一个对象
+    --.JSON的规则很简单：对象是一个无序的“名称/值对”集合，如{"名称1":"值1","名称2":"值2"...}
+        var jsonObject = {
+                "name":"Tom",
+                "age":12,
+                "address":{"city":"Beijing","street":"ChangAn"}
+                "eat":function(){alert("Hello Ajax!")}
+        }
+        *.通过jsonObject对象可以直接“.”出来对应的属性或方法，类似于对象和成员变量/方法
+    --.解析Json:JSON只是一种文本字符串，它被存储在responseText属性中，为了读取存储在responseText
+    属性中的JSON数据，需要根据JvaScript的eval语句。
+    --.eval函数会把一个字符串转为JSON对象，eval("字符串")，解析成JSON对象来执行，如果字符串是一个
+    JSON对象字符串，需要加一对“（）”才能执行
+
+<jQuery中的Ajax>
+    1.load():如果需要加载目标HTML页面内的某些元素，则可以通过load()方法的URL参数来达到此目的，
+    通过URL参数指定选择符，就可以方便的从加载过来的HTML文档中许褚所欲需要的内容。注意空格
+    通常，方法加载后的数据是一个HTML片段
+    2.$.get()、$.post()、$.getJson(),更加灵活，返回的就是一个JSON对象
+    url:Ajax请求的目标URL
+    args：传递的参数：JSON类型
+    data:Ajax相应成功后的数据，可能是XML/HTML/JSON
+
+    $getJson(url,args,function(data){
+
+    })
+
+    --.请求JSON数据
+        $.get(url,args,function(data){
+
+        },"JSON");
+        $.post(url,args,function(data){
+
+        },"JSON");
+        $.getJson(url,args,function(data){
+
+        });

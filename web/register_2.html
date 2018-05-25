@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <!-- start menu -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simpleCart.min.js"> </script>
+    <!-- slide -->
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        $(function () {
+            $("#slider").responsiveSlides({
+                auto: true,
+                speed: 500,
+                namespace: "callbacks",
+                pager: true,
+            });
+        });
+    </script>
+    <style type="text/css">
+        .submit {
+            width: 100px;
+            height: 50px;
+            float:right;
+            margin-top: 20px;
+            background-color: deeppink;
+            border-radius: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!--header-->
+<div class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="col-sm-4 logo">
+                <h1><a href="index.html">Young <span>Fashion</span></a></h1>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//header-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
+            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+            <li class="active">Register</li>
+        </ol>
+    </div>
+</div>
+<div class="container">
+    <div class="register">
+        <h2>Register</h2>
+        <form action="/registerController_2.form" method="post">
+            <div class="col-md-6  register-top-grid">
+                <div class="mation">
+                    <span>设置账号 格式为英文字母加数字 不超过10位</span>
+                    <input type="text" name="userAccount">
+
+                    <span>设置密码 格式为六位纯数字 </span>
+                    <input type="password" name="userPassword">
+
+                    <span>确认密码</span>
+                    <input type="password" name="userRePassword">
+
+                    <input type="submit" value="提交" class="submit" >
+                </div>
+
+
+
+            </div>
+        </form>
+
+
+    </div>
+</div>
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
+                <h6>Categories</h6>
+                <ul>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
+                <h6>Feature Projects</h6>
+                <ul>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-bottom-cate animated wow fadeInRight" data-wow-delay=".5s">
+                <h6>Top Brands</h6>
+                <ul>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+                    <li><a href="">Shopping Online</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-3 footer-bottom-cate cate-bottom animated wow fadeInRight" data-wow-delay=".5s">
+                <h6>Our Address</h6>
+                <ul>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>地址 : HarBin HeiDa <span>HeiLong</span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>邮箱 : <a href="https://mail.163.com/.com">@163.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>电话 : +1234 567 567</li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+            <p class="footer-class animated wow fadeInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">Copyright &copy; 2018.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="MSS Home">MSS Home</a> - Collect from <a href="http://www.cssmoban.com/" title="MssHome" target="_blank">Mss Home</a></p>
+        </div>
+    </div>
+</div>
+<!--footer-->
+</body>
+</html>
